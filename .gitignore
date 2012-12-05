@@ -11,3 +11,10 @@
 *.lai
 *.la
 *.a
+
+# Auto-generated files by cmake
+CMakeCache.txt
+CMakeFiles
+Makefile
+cmake_install.cmake
+install_manifest.txt

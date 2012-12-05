@@ -1,0 +1,7 @@
+<world name="CARWORLD">
+
+<!-- Include the models by including either the complete urdf or referencing the file name -->
+<include filename="Car.urdf" model_name="car" />
+
+<!-- Construct the world -->
+<entity model="car" name="

@@ -1,4 +1,4 @@
-# Install script for directory: /home/rahul/Documents/RIP12Tabs/TabRIP-MotionPlanner
+# Install script for directory: /home/greg/Documents/2012 Fall/CS 4649/RIPCarPlanner/TabRIP-MotionPlanner
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,7 +38,7 @@ ELSE(CMAKE_INSTALL_COMPONENT)
   SET(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
 ENDIF(CMAKE_INSTALL_COMPONENT)
 
-FILE(WRITE "/home/rahul/Documents/RIP12Tabs/TabRIP-MotionPlanner/${CMAKE_INSTALL_MANIFEST}" "")
+FILE(WRITE "/home/greg/Documents/2012 Fall/CS 4649/RIPCarPlanner/TabRIP-MotionPlanner/${CMAKE_INSTALL_MANIFEST}" "")
 FOREACH(file ${CMAKE_INSTALL_MANIFEST_FILES})
-  FILE(APPEND "/home/rahul/Documents/RIP12Tabs/TabRIP-MotionPlanner/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+  FILE(APPEND "/home/greg/Documents/2012 Fall/CS 4649/RIPCarPlanner/TabRIP-MotionPlanner/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
 ENDFOREACH(file)

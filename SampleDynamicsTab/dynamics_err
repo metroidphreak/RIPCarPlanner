@@ -1,0 +1,324 @@
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/libgrip.a when searching for -lgrip
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/libgrip.a when searching for -lgrip
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/libgrip.a when searching for -lgrip
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../libgrip.a when searching for -lgrip
+/usr/bin/ld: skipping incompatible /usr/lib/libgrip.a when searching for -lgrip
+/usr/bin/ld: cannot find -lgrip
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/libggui.a when searching for -lggui
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/libggui.a when searching for -lggui
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/libggui.a when searching for -lggui
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../libggui.a when searching for -lggui
+/usr/bin/ld: skipping incompatible /usr/lib/libggui.a when searching for -lggui
+/usr/bin/ld: cannot find -lggui
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/libgtabs.a when searching for -lgtabs
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/libgtabs.a when searching for -lgtabs
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/libgtabs.a when searching for -lgtabs
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../libgtabs.a when searching for -lgtabs
+/usr/bin/ld: skipping incompatible /usr/lib/libgtabs.a when searching for -lgtabs
+/usr/bin/ld: cannot find -lgtabs
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/libgtools.a when searching for -lgtools
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/libgtools.a when searching for -lgtools
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/libgtools.a when searching for -lgtools
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../libgtools.a when searching for -lgtools
+/usr/bin/ld: skipping incompatible /usr/lib/libgtools.a when searching for -lgtools
+/usr/bin/ld: cannot find -lgtools
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/libparser.a when searching for -lparser
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/libparser.a when searching for -lparser
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/libparser.a when searching for -lparser
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../libparser.a when searching for -lparser
+/usr/bin/ld: skipping incompatible /usr/lib/libparser.a when searching for -lparser
+/usr/bin/ld: cannot find -lparser
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/liburdfdom_model.a when searching for -lurdfdom_model
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/liburdfdom_model.a when searching for -lurdfdom_model
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/liburdfdom_model.a when searching for -lurdfdom_model
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../liburdfdom_model.a when searching for -lurdfdom_model
+/usr/bin/ld: skipping incompatible /usr/lib/liburdfdom_model.a when searching for -lurdfdom_model
+/usr/bin/ld: cannot find -lurdfdom_model
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/liburdfdom_model_state.a when searching for -lurdfdom_model_state
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/liburdfdom_model_state.a when searching for -lurdfdom_model_state
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/liburdfdom_model_state.a when searching for -lurdfdom_model_state
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../liburdfdom_model_state.a when searching for -lurdfdom_model_state
+/usr/bin/ld: skipping incompatible /usr/lib/liburdfdom_model_state.a when searching for -lurdfdom_model_state
+/usr/bin/ld: cannot find -lurdfdom_model_state
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/liburdfdom_sensor.a when searching for -lurdfdom_sensor
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/liburdfdom_sensor.a when searching for -lurdfdom_sensor
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/liburdfdom_sensor.a when searching for -lurdfdom_sensor
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../liburdfdom_sensor.a when searching for -lurdfdom_sensor
+/usr/bin/ld: skipping incompatible /usr/lib/liburdfdom_sensor.a when searching for -lurdfdom_sensor
+/usr/bin/ld: cannot find -lurdfdom_sensor
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/librobotics.a when searching for -lrobotics
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/librobotics.a when searching for -lrobotics
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/librobotics.a when searching for -lrobotics
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../librobotics.a when searching for -lrobotics
+/usr/bin/ld: skipping incompatible /usr/lib/librobotics.a when searching for -lrobotics
+/usr/bin/ld: cannot find -lrobotics
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/libcollision.a when searching for -lcollision
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/libcollision.a when searching for -lcollision
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/libcollision.a when searching for -lcollision
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../libcollision.a when searching for -lcollision
+/usr/bin/ld: skipping incompatible /usr/lib/libcollision.a when searching for -lcollision
+/usr/bin/ld: cannot find -lcollision
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/libdynamics.a when searching for -ldynamics
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/libdynamics.a when searching for -ldynamics
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/libdynamics.a when searching for -ldynamics
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../libdynamics.a when searching for -ldynamics
+/usr/bin/ld: skipping incompatible /usr/lib/libdynamics.a when searching for -ldynamics
+/usr/bin/ld: cannot find -ldynamics
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/libkinematics.a when searching for -lkinematics
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/libkinematics.a when searching for -lkinematics
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/libkinematics.a when searching for -lkinematics
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../libkinematics.a when searching for -lkinematics
+/usr/bin/ld: skipping incompatible /usr/lib/libkinematics.a when searching for -lkinematics
+/usr/bin/ld: cannot find -lkinematics
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/librenderer.a when searching for -lrenderer
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/librenderer.a when searching for -lrenderer
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/librenderer.a when searching for -lrenderer
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../librenderer.a when searching for -lrenderer
+/usr/bin/ld: skipping incompatible /usr/lib/librenderer.a when searching for -lrenderer
+/usr/bin/ld: cannot find -lrenderer
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/libutils.a when searching for -lutils
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/libutils.a when searching for -lutils
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/libutils.a when searching for -lutils
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../libutils.a when searching for -lutils
+/usr/bin/ld: skipping incompatible /usr/lib/libutils.a when searching for -lutils
+/usr/bin/ld: cannot find -lutils
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/libtinyxml.so when searching for -ltinyxml
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/libtinyxml.so when searching for -ltinyxml
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/libtinyxml.so when searching for -ltinyxml
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../libtinyxml.so when searching for -ltinyxml
+/usr/bin/ld: skipping incompatible /usr/lib/libtinyxml.so when searching for -ltinyxml
+/usr/bin/ld: cannot find -ltinyxml
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/libintegration.a when searching for -lintegration
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/libintegration.a when searching for -lintegration
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/libintegration.a when searching for -lintegration
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../libintegration.a when searching for -lintegration
+/usr/bin/ld: skipping incompatible /usr/lib/libintegration.a when searching for -lintegration
+/usr/bin/ld: cannot find -lintegration
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/liblcpsolver.a when searching for -llcpsolver
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/liblcpsolver.a when searching for -llcpsolver
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/liblcpsolver.a when searching for -llcpsolver
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../liblcpsolver.a when searching for -llcpsolver
+/usr/bin/ld: skipping incompatible /usr/lib/liblcpsolver.a when searching for -llcpsolver
+/usr/bin/ld: cannot find -llcpsolver
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/libccd.so when searching for -lccd
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/libccd.a when searching for -lccd
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/libccd.so when searching for -lccd
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/libccd.a when searching for -lccd
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/libccd.so when searching for -lccd
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/libccd.a when searching for -lccd
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../libccd.so when searching for -lccd
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../libccd.a when searching for -lccd
+/usr/bin/ld: skipping incompatible /usr/lib/libccd.so when searching for -lccd
+/usr/bin/ld: skipping incompatible /usr/lib/libccd.a when searching for -lccd
+/usr/bin/ld: cannot find -lccd
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/libfcl.a when searching for -lfcl
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/libfcl.a when searching for -lfcl
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/libfcl.a when searching for -lfcl
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../libfcl.a when searching for -lfcl
+/usr/bin/ld: skipping incompatible /usr/lib/libfcl.a when searching for -lfcl
+/usr/bin/ld: cannot find -lfcl
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/libparser.a when searching for -lparser
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/libparser.a when searching for -lparser
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/libparser.a when searching for -lparser
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../libparser.a when searching for -lparser
+/usr/bin/ld: skipping incompatible /usr/lib/libparser.a when searching for -lparser
+/usr/bin/ld: cannot find -lparser
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/liburdfdom_model.a when searching for -lurdfdom_model
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/liburdfdom_model.a when searching for -lurdfdom_model
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/liburdfdom_model.a when searching for -lurdfdom_model
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../liburdfdom_model.a when searching for -lurdfdom_model
+/usr/bin/ld: skipping incompatible /usr/lib/liburdfdom_model.a when searching for -lurdfdom_model
+/usr/bin/ld: cannot find -lurdfdom_model
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/liburdfdom_model_state.a when searching for -lurdfdom_model_state
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/liburdfdom_model_state.a when searching for -lurdfdom_model_state
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/liburdfdom_model_state.a when searching for -lurdfdom_model_state
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../liburdfdom_model_state.a when searching for -lurdfdom_model_state
+/usr/bin/ld: skipping incompatible /usr/lib/liburdfdom_model_state.a when searching for -lurdfdom_model_state
+/usr/bin/ld: cannot find -lurdfdom_model_state
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/liburdfdom_sensor.a when searching for -lurdfdom_sensor
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/liburdfdom_sensor.a when searching for -lurdfdom_sensor
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/liburdfdom_sensor.a when searching for -lurdfdom_sensor
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../liburdfdom_sensor.a when searching for -lurdfdom_sensor
+/usr/bin/ld: skipping incompatible /usr/lib/liburdfdom_sensor.a when searching for -lurdfdom_sensor
+/usr/bin/ld: cannot find -lurdfdom_sensor
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/librobotics.a when searching for -lrobotics
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/librobotics.a when searching for -lrobotics
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/librobotics.a when searching for -lrobotics
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../librobotics.a when searching for -lrobotics
+/usr/bin/ld: skipping incompatible /usr/lib/librobotics.a when searching for -lrobotics
+/usr/bin/ld: cannot find -lrobotics
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/libcollision.a when searching for -lcollision
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/libcollision.a when searching for -lcollision
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/libcollision.a when searching for -lcollision
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../libcollision.a when searching for -lcollision
+/usr/bin/ld: skipping incompatible /usr/lib/libcollision.a when searching for -lcollision
+/usr/bin/ld: cannot find -lcollision
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/libdynamics.a when searching for -ldynamics
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/libdynamics.a when searching for -ldynamics
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/libdynamics.a when searching for -ldynamics
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../libdynamics.a when searching for -ldynamics
+/usr/bin/ld: skipping incompatible /usr/lib/libdynamics.a when searching for -ldynamics
+/usr/bin/ld: cannot find -ldynamics
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/libkinematics.a when searching for -lkinematics
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/libkinematics.a when searching for -lkinematics
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/libkinematics.a when searching for -lkinematics
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../libkinematics.a when searching for -lkinematics
+/usr/bin/ld: skipping incompatible /usr/lib/libkinematics.a when searching for -lkinematics
+/usr/bin/ld: cannot find -lkinematics
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/librenderer.a when searching for -lrenderer
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/librenderer.a when searching for -lrenderer
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/librenderer.a when searching for -lrenderer
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../librenderer.a when searching for -lrenderer
+/usr/bin/ld: skipping incompatible /usr/lib/librenderer.a when searching for -lrenderer
+/usr/bin/ld: cannot find -lrenderer
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/libutils.a when searching for -lutils
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/libutils.a when searching for -lutils
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/libutils.a when searching for -lutils
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../libutils.a when searching for -lutils
+/usr/bin/ld: skipping incompatible /usr/lib/libutils.a when searching for -lutils
+/usr/bin/ld: cannot find -lutils
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/libtinyxml.so when searching for -ltinyxml
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/libtinyxml.so when searching for -ltinyxml
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/libtinyxml.so when searching for -ltinyxml
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../libtinyxml.so when searching for -ltinyxml
+/usr/bin/ld: skipping incompatible /usr/lib/libtinyxml.so when searching for -ltinyxml
+/usr/bin/ld: cannot find -ltinyxml
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/libintegration.a when searching for -lintegration
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/libintegration.a when searching for -lintegration
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/libintegration.a when searching for -lintegration
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../libintegration.a when searching for -lintegration
+/usr/bin/ld: skipping incompatible /usr/lib/libintegration.a when searching for -lintegration
+/usr/bin/ld: cannot find -lintegration
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/liblcpsolver.a when searching for -llcpsolver
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/liblcpsolver.a when searching for -llcpsolver
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/liblcpsolver.a when searching for -llcpsolver
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../liblcpsolver.a when searching for -llcpsolver
+/usr/bin/ld: skipping incompatible /usr/lib/liblcpsolver.a when searching for -llcpsolver
+/usr/bin/ld: cannot find -llcpsolver
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/libccd.so when searching for -lccd
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/libccd.a when searching for -lccd
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/libccd.so when searching for -lccd
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/libccd.a when searching for -lccd
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/libccd.so when searching for -lccd
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/libccd.a when searching for -lccd
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../libccd.so when searching for -lccd
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../libccd.a when searching for -lccd
+/usr/bin/ld: skipping incompatible /usr/lib/libccd.so when searching for -lccd
+/usr/bin/ld: skipping incompatible /usr/lib/libccd.a when searching for -lccd
+/usr/bin/ld: cannot find -lccd
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/libfcl.a when searching for -lfcl
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/libfcl.a when searching for -lfcl
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/libfcl.a when searching for -lfcl
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../libfcl.a when searching for -lfcl
+/usr/bin/ld: skipping incompatible /usr/lib/libfcl.a when searching for -lfcl
+/usr/bin/ld: cannot find -lfcl
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/libccd.so when searching for -lccd
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/libccd.a when searching for -lccd
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/libccd.so when searching for -lccd
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/libccd.a when searching for -lccd
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/libccd.so when searching for -lccd
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/libccd.a when searching for -lccd
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../libccd.so when searching for -lccd
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../libccd.a when searching for -lccd
+/usr/bin/ld: skipping incompatible /usr/lib/libccd.so when searching for -lccd
+/usr/bin/ld: skipping incompatible /usr/lib/libccd.a when searching for -lccd
+/usr/bin/ld: cannot find -lccd
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/libparser.a when searching for -lparser
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/libparser.a when searching for -lparser
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/libparser.a when searching for -lparser
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../libparser.a when searching for -lparser
+/usr/bin/ld: skipping incompatible /usr/lib/libparser.a when searching for -lparser
+/usr/bin/ld: cannot find -lparser
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/liburdfdom_model.a when searching for -lurdfdom_model
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/liburdfdom_model.a when searching for -lurdfdom_model
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/liburdfdom_model.a when searching for -lurdfdom_model
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../liburdfdom_model.a when searching for -lurdfdom_model
+/usr/bin/ld: skipping incompatible /usr/lib/liburdfdom_model.a when searching for -lurdfdom_model
+/usr/bin/ld: cannot find -lurdfdom_model
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/liburdfdom_model_state.a when searching for -lurdfdom_model_state
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/liburdfdom_model_state.a when searching for -lurdfdom_model_state
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/liburdfdom_model_state.a when searching for -lurdfdom_model_state
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../liburdfdom_model_state.a when searching for -lurdfdom_model_state
+/usr/bin/ld: skipping incompatible /usr/lib/liburdfdom_model_state.a when searching for -lurdfdom_model_state
+/usr/bin/ld: cannot find -lurdfdom_model_state
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/liburdfdom_sensor.a when searching for -lurdfdom_sensor
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/liburdfdom_sensor.a when searching for -lurdfdom_sensor
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/liburdfdom_sensor.a when searching for -lurdfdom_sensor
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../liburdfdom_sensor.a when searching for -lurdfdom_sensor
+/usr/bin/ld: skipping incompatible /usr/lib/liburdfdom_sensor.a when searching for -lurdfdom_sensor
+/usr/bin/ld: cannot find -lurdfdom_sensor
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/librobotics.a when searching for -lrobotics
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/librobotics.a when searching for -lrobotics
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/librobotics.a when searching for -lrobotics
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../librobotics.a when searching for -lrobotics
+/usr/bin/ld: skipping incompatible /usr/lib/librobotics.a when searching for -lrobotics
+/usr/bin/ld: cannot find -lrobotics
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/libcollision.a when searching for -lcollision
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/libcollision.a when searching for -lcollision
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/libcollision.a when searching for -lcollision
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../libcollision.a when searching for -lcollision
+/usr/bin/ld: skipping incompatible /usr/lib/libcollision.a when searching for -lcollision
+/usr/bin/ld: cannot find -lcollision
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/libdynamics.a when searching for -ldynamics
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/libdynamics.a when searching for -ldynamics
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/libdynamics.a when searching for -ldynamics
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../libdynamics.a when searching for -ldynamics
+/usr/bin/ld: skipping incompatible /usr/lib/libdynamics.a when searching for -ldynamics
+/usr/bin/ld: cannot find -ldynamics
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/libkinematics.a when searching for -lkinematics
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/libkinematics.a when searching for -lkinematics
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/libkinematics.a when searching for -lkinematics
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../libkinematics.a when searching for -lkinematics
+/usr/bin/ld: skipping incompatible /usr/lib/libkinematics.a when searching for -lkinematics
+/usr/bin/ld: cannot find -lkinematics
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/librenderer.a when searching for -lrenderer
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/librenderer.a when searching for -lrenderer
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/librenderer.a when searching for -lrenderer
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../librenderer.a when searching for -lrenderer
+/usr/bin/ld: skipping incompatible /usr/lib/librenderer.a when searching for -lrenderer
+/usr/bin/ld: cannot find -lrenderer
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/libutils.a when searching for -lutils
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/libutils.a when searching for -lutils
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/libutils.a when searching for -lutils
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../libutils.a when searching for -lutils
+/usr/bin/ld: skipping incompatible /usr/lib/libutils.a when searching for -lutils
+/usr/bin/ld: cannot find -lutils
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/libtinyxml.so when searching for -ltinyxml
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/libtinyxml.so when searching for -ltinyxml
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/libtinyxml.so when searching for -ltinyxml
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../libtinyxml.so when searching for -ltinyxml
+/usr/bin/ld: skipping incompatible /usr/lib/libtinyxml.so when searching for -ltinyxml
+/usr/bin/ld: cannot find -ltinyxml
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/libintegration.a when searching for -lintegration
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/libintegration.a when searching for -lintegration
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/libintegration.a when searching for -lintegration
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../libintegration.a when searching for -lintegration
+/usr/bin/ld: skipping incompatible /usr/lib/libintegration.a when searching for -lintegration
+/usr/bin/ld: cannot find -lintegration
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/liblcpsolver.a when searching for -llcpsolver
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/liblcpsolver.a when searching for -llcpsolver
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/liblcpsolver.a when searching for -llcpsolver
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../liblcpsolver.a when searching for -llcpsolver
+/usr/bin/ld: skipping incompatible /usr/lib/liblcpsolver.a when searching for -llcpsolver
+/usr/bin/ld: cannot find -llcpsolver
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/libccd.so when searching for -lccd
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/libccd.a when searching for -lccd
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/libccd.so when searching for -lccd
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/libccd.a when searching for -lccd
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/libccd.so when searching for -lccd
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/libccd.a when searching for -lccd
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../libccd.so when searching for -lccd
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../libccd.a when searching for -lccd
+/usr/bin/ld: skipping incompatible /usr/lib/libccd.so when searching for -lccd
+/usr/bin/ld: skipping incompatible /usr/lib/libccd.a when searching for -lccd
+/usr/bin/ld: cannot find -lccd
+/usr/bin/ld: skipping incompatible /usr/share/dart/../../lib/libfcl.a when searching for -lfcl
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../../lib/libfcl.a when searching for -lfcl
+/usr/bin/ld: skipping incompatible /usr/lib/../lib/libfcl.a when searching for -lfcl
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../libfcl.a when searching for -lfcl
+/usr/bin/ld: skipping incompatible /usr/lib/libfcl.a when searching for -lfcl
+/usr/bin/ld: cannot find -lfcl
+collect2: ld returned 1 exit status
+make[2]: *** [ExampleDynamicSimulatorTab] Error 1
+make[1]: *** [CMakeFiles/ExampleDynamicSimulatorTab.dir/all] Error 2
+make: *** [all] Error 2

@@ -7,3 +7,5 @@
 <entity model="car" name="car">
 	<origin xyz="0 0 0" rpy="0 0 0" />
 </entity>
+
+</world>

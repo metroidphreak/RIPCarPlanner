@@ -346,7 +346,7 @@ void PathPlanner::smoothPath( int _robotId,
 	  {
 		  pathend1 = pathend2;
 		  pathend2 ++;
-		  std::cout<<"Moving a step further"<<endl;
+		  std::cout<<"Moving a step further"<<std::endl;
 	  }
 	  else
 	  {
@@ -355,7 +355,7 @@ void PathPlanner::smoothPath( int _robotId,
 		  {
 			  pathhead = pathend1 = pathend2;
 			  pathend2 ++;
-			  std::cout<<"all  Moving a step further"<<endl;
+			  std::cout<<"all  Moving a step further"<<std::endl;
 		  }
 		  else
 		  {
@@ -385,7 +385,7 @@ void PathPlanner::smoothPath( int _robotId,
 
 			  pathhead = pathend1 = pathend2 = path.begin();
 			  pathend2 ++; 
-			  std::cout<<"Path shortened!"<<endl;
+			  std::cout<<"Path shortened!"<<std::endl;
 		  } 
 	  }
   }

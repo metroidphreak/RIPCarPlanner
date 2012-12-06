@@ -8,6 +8,7 @@
 
 #include "GRIPApp.h"
 #include "ExampleDynamicSimulationTab.hpp"
+#include "tabRipPlanner.h"
 
 extern wxNotebook* tabView;
 
@@ -17,7 +18,8 @@ extern wxNotebook* tabView;
 class RipPlannerTabApp : public GRIPApp {
     virtual void AddTabs() {
         tabView->AddPage(new ExampleDynamicSimulationTab(tabView), wxT("Dynamic Sim Example"));
-    }
+        tabView->AddPage(new RipPlannerTab(tabView), wxT("RIP Planner"));
+	}
 };
 
 IMPLEMENT_APP(RipPlannerTabApp)

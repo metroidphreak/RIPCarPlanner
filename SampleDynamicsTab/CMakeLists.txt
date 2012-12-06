@@ -29,8 +29,10 @@ INCLUDE_DIRECTORIES( ${GLUT_INCLUDE_DIRS} )
 MESSAGE(STATUS "${GLUT_glut_LIBRARY}")
 
 # Search all header and source files
-set ( dynamics_tab_src ExampleDynamicSimulationTab.cpp ExampleDynamicSimulationTabApp.cpp WorldIntegrator.cpp)
-set ( dynamics_tab_hdr ExampleDynamicSimulationTab.hpp WorldIntegrator.hpp)
+set ( dynamics_tab_src ExampleDynamicSimulationTab.cpp ExampleDynamicSimulationTabApp.cpp WorldIntegrator.cpp tabRipPlanner.cpp RRT.cpp PathPlanner.cpp )
+set ( dynamics_tab_hdr ExampleDynamicSimulationTab.hpp WorldIntegrator.hpp tabRipPlanner.h RRT.h PathPlanner.h )
+set ( kdtree_srcs kdtree/kdtree.c )
+set ( kdtree_hdrs kdtree/kdtree.h )
 
 if(WIN32)
   set (wxWidgets_EXCLUDE_COMMON_LIBRARIES TRUE)
@@ -46,10 +48,10 @@ if (wxWidgets_FOUND)
   link_directories(${CMAKE_SOURCE_DIR}/lib ${GRIP_LIBDIR} ${WXWIDGETS_SHARED_LIBRARY_DIRS})
 
   if(MSVC)
-    add_executable (ExampleDynamicSimulatorTab WIN32 ${dynamics_tab_src} ${dynamics_tab_hdr})
+    add_executable (ExampleDynamicSimulatorTab WIN32 ${dynamics_tab_src} ${dynamics_tab_hdr} ${kdtree_srcs})
     set_target_properties (ExampleDynamicSimulatorTab PROPERTIES LINK_FLAGS "/SUBSYSTEM:WINDOWS")
   else()
-    add_executable (ExampleDynamicSimulatorTab WIN32 ${dynamics_tab_src} ${dynamics_tab_hdr})
+    add_executable (ExampleDynamicSimulatorTab WIN32 ${dynamics_tab_src} ${dynamics_tab_hdr} ${kdtree_srcs})
   endif()
 
   target_link_libraries (ExampleDynamicSimulatorTab ${GRIP_LIBRARIES} ${DART_LIBRARIES} ccd ${wxWidgets_LIBRARIES} ${OPENGL_LIBRARIES} ${GLUT_glut_LIBRARY} ${GLU_LIBRARIES} )

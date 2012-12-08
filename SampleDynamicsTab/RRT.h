@@ -43,11 +43,22 @@ public:
 
     int ndim;
     double stepSize;
+    
+    double maxSteeringStep; // Maximum steering step between each time step
+    double minTurnRadius; // Turn radius limit for the car
+    double trackSize; // Distance from left to right wheel
+    double wheelBase; // Distance from front to rear wheel
+    double speed;     // Constant velocity model
+    double timeStep;  // Time for each step. speed and timeStep can be avoided by using the stepSize every time.
+    
   
     int activeNode;
     std::vector<int> parentVector; /**< Vector of indices to relate configs in RRT */
     std::vector<Eigen::VectorXd> configVector; /**< Vector of all visited configs */
-          
+    std::vector<double> carOrientationAngleVector; /**< Vector of steering angle at each config */
+    std::vector<double> steeringAngleVector; /**< Vector of steering angle at each config */
+    
+    
     struct kdtree *kdTree;
 
     /// Constructor
@@ -72,6 +83,9 @@ public:
 
     /// Tries to extend tree towards provided sample (must be overridden for MBP ) 
     virtual StepResult tryStepFromNode( const Eigen::VectorXd &_qtry, int _NNIdx );
+    
+    /// Tries to extend tree towards provided sample (must be overridden for MBP ) 
+    virtual StepResult tryStepFromNodeWithHolonomic( const Eigen::VectorXd &_qtry, int _NNIdx );
     
     /// Add qnew to tree with parent _parentId
     int addNode( const Eigen::VectorXd &_qnew, int _parentId );  

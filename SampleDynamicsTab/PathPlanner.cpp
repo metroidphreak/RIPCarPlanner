@@ -327,7 +327,7 @@ void PathPlanner::smoothPath( int _robotId,
   {return;}
   std::list<Eigen::VectorXd>::iterator pathhead, pathend1, pathend2; 
   std::list<Eigen::VectorXd> originalCopy = _path;
-  int oLength = originalCopy.size();
+  //int oLength = originalCopy.size();
   ////////////////////////////////////////
   //
   //  pathend2 = pathend1 + 1;
@@ -389,7 +389,7 @@ void PathPlanner::smoothPath( int _robotId,
 		  } 
 	  }
   }
-  int nLength = _path.size();
+  //int nLength = _path.size();
 	std::cout << "Finished Optimizing!  Final path length: " << _path.size() << std::endl;  
   return;
   // ========================================	

@@ -16,6 +16,8 @@
 #include <kinematics/Dof.h>
 #include "RRT.h"
 
+#define PI 3.14159265
+
 /**
  * @function RRT
  * @brief Constructor
@@ -123,6 +125,104 @@ RRT::StepResult RRT::tryStepFromNode( const Eigen::VectorXd &_qtry, int _NNIdx )
   }
   
 }
+
+/**
+ * @function tryStepFromNodeWithHolonomic
+ * @brief Tries to extend tree towards provided sample (must be overridden for MBP ) 
+
+ */
+RRT::StepResult RRT::tryStepFromNodeWithHolonomic( const Eigen::VectorXd &_qtry, int _NNIdx ) {
+  
+  /// Calculates a new node to grow towards _qtry, check for collisions and adds to tree 
+  Eigen::VectorXd qnear = configVector[_NNIdx];
+  double qnearOrientation = carOrientationAngleVector[_NNIdx];
+  double qnearSteeringAngle = steeringAngleVector[_NNIdx];
+  double newSteeringAngle;
+  
+  /// Compute direction and magnitude
+  Eigen::VectorXd diff = _qtry - qnear;
+  Eigen::VectorXd sum = (_qtry + qnear)/2;
+  
+  double dist = diff.norm();
+  if( dist < stepSize )
+  { 
+    return STEP_REACHED; 
+  }
+  
+  // perpendicular bisector between start and goal
+  double a=sum[0]/2,b=sum[1]/2;
+  double slopePerpendicularBisector=(_qtry[0]-qnear[0])/(qnear[1]-_qtry[1]);
+  
+  double a1,b1,c1;
+  double a2,b2,c2;
+  
+  a1 = slopePerpendicularBisector;
+  b1 = -1;
+  c1 = (a*a1)-b;
+  
+  a2 = 1;
+  b2 = tan(qnearSteeringAngle);
+  c2 = qnear[0] + (b2*qnear[1]);
+  
+  Eigen::VectorXd centerOfArc = qnear;
+  centerOfArc[0] = ((c1*b2)-(c2*b1))/((a1*b2)-(a2*b1));
+  centerOfArc[1] = ((a1*c2)-(a2*c1))/((a1*b2)-(a2*b1));
+  
+  double turnRadius = (centerOfArc-qnear).norm();
+  
+  if( turnRadius < minTurnRadius )
+  {
+    return STEP_COLLISION;
+  }
+  
+  double angleSubtended = 2*atan(0.5*dist/turnRadius);
+  double arcLength = angleSubtended*turnRadius;
+  
+  double radiusAngle = atan2(qnear[1]-centerOfArc[1],qnear[0]-centerOfArc[0]);
+  
+  // Scale this vector to stepSize and add to end of qnear
+  Eigen::VectorXd qnew = centerOfArc;
+  double deltaTheta = angleSubtended*(stepSize/arcLength);
+  //qnew[0] += diff*(stepSize/arcLength);
+  double newRadiusAngle;
+  if( (radiusAngle> 0 && qnearOrientation<=PI/2 && qnearOrientation>-PI/2) ||
+      (radiusAngle< 0 && (qnearOrientation>=PI/2 || qnearOrientation<-PI/2)) )
+  {
+    // right turn 
+    newRadiusAngle = (radiusAngle-deltaTheta<-PI)?(radiusAngle-deltaTheta+2*PI):(radiusAngle-deltaTheta);
+    qnew[0] += turnRadius*cos(newRadiusAngle);
+    qnew[1] += turnRadius*sin(newRadiusAngle);
+    newSteeringAngle = asin(wheelBase/(trackSize/2-turnRadius));
+  }
+  else if( (radiusAngle> 0 && (qnearOrientation>PI/2 || qnearOrientation<=-PI/2)) ||
+           (radiusAngle< 0 && qnearOrientation<PI/2 && qnearOrientation>=-PI/2) )
+  {
+    // left turn
+    newRadiusAngle = (radiusAngle+deltaTheta>PI)?(radiusAngle+deltaTheta-2*PI):(radiusAngle+deltaTheta);
+    qnew[0] += turnRadius*cos(newRadiusAngle);
+    qnew[1] += turnRadius*sin(newRadiusAngle);
+    newSteeringAngle = asin(wheelBase/(trackSize/2-turnRadius));
+  }
+  else
+  {
+    return STEP_COLLISION;
+  }
+  double roll, pitch, yaw;
+  world->getRobot(robotId)->getRotationRPY(roll,pitch,yaw);
+  
+  if( !checkCollisions(qnew) )
+  {
+    addNode( qnew, _NNIdx );
+    carOrientationAngleVector.push_back((newRadiusAngle-(PI/2)<-PI)?(newRadiusAngle-(PI/2)+(2*PI)):(newRadiusAngle-(PI/2)));
+    steeringAngleVector.push_back(newSteeringAngle);
+    world->getRobot(robotId)->setRotationRPY(roll,pitch,newSteeringAngle);
+    return STEP_PROGRESS;
+  } else {
+    return STEP_COLLISION;
+  }
+  
+}
+
 
 /**
  * @function addNode

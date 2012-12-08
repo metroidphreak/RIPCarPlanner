@@ -1,0 +1,58 @@
+<world name="sphere_scene">
+  <!-- include the models here by referenceing their URDFs -->
+  <include filename="floor.urdf" model_name="floor"/>
+  <include filename="sphere_red.urdf" model_name="sphere_red"/>
+  <include filename="sphere_blue.urdf" model_name="sphere_blue"/>
+  <include filename="luggage3.urdf" model_name="luggage3"/>
+  
+  <!-- construct world -->
+
+  <entity model="luggage3">
+	  <origin xyz="0 0 1" rpy="1.57 0 0"/>
+  </entity>
+
+  <entity model="floor" name="floor">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </entity>
+
+  <entity model="sphere_red" name="sphere 1">
+    <origin xyz="0 3 1" rpy="0 0 0"/>
+  </entity>
+
+  <entity model="sphere_blue" name="sphere 4">
+    <origin xyz="0 -3 1" rpy="0 0 0"/>
+  </entity>
+
+  <entity model="sphere_blue" name="sphere 2">
+    <origin xyz="1 1 1" rpy="0 0 0"/>
+  </entity>
+
+  <entity model="sphere_blue" name="sphere 3">
+    <origin xyz="1 2.2 1" rpy="0 0 0"/>
+  </entity>
+
+  <entity model="sphere_blue" name="sphere 3">
+    <origin xyz="1.5 0 1" rpy="0 0 0"/>
+  </entity>
+
+  <entity model="sphere_blue" name="sphere 4">
+    <origin xyz="5 0 1" rpy="0 0 0"/>
+  </entity>
+
+  <entity model="sphere_blue" name="sphere 5">
+    <origin xyz="5 -2 1" rpy="0 0 0"/>
+  </entity>
+
+  <entity model="sphere_blue" name="sphere 6">
+    <origin xyz="5 -3.2 1" rpy="0 0 0"/>
+  </entity>
+
+  <entity model="sphere_blue" name="sphere 7">
+    <origin xyz="-2 0 1" rpy="0 0 0"/>
+  </entity>
+
+  <entity model="sphere_blue" name="sphere 8">
+    <origin xyz="9 5 1" rpy="0 0 0"/>
+  </entity>
+
+</world>

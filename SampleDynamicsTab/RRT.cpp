@@ -195,6 +195,7 @@ RRT::StepResult RRT::tryStepFromNodeWithHolonomic( const Eigen::VectorXd &_qtry,
   
   double radiusAngle = atan2(qnear[1]-centerOfArc[1],qnear[0]-centerOfArc[0]);
   
+
   
   
   // Scale this vector to stepSize and add to end of qnear
@@ -203,32 +204,66 @@ RRT::StepResult RRT::tryStepFromNodeWithHolonomic( const Eigen::VectorXd &_qtry,
   
   //std::cerr<<angleSubtended<<"  "<<arcLength<<"  "<<deltaTheta<<"\n";
   //qnew[0] += diff*(stepSize/arcLength);
+  double startAngle = atan2(qnear[1]-centerOfArc[1],qnear[0]-centerOfArc[0]);
+  double endAngle = atan2(qtry[1]-centerOfArc[1],qtry[0]-centerOfArc[0]);
+  double angleDiff = startAngle-endAngle;
+
   double newRadiusAngle;
   //std::cerr<<"angles"<<radiusAngle<<"  "<<qnearOrientation<<"\n";
   if( (radiusAngle< 0 && qnearOrientation<=PI/2 && qnearOrientation>-PI/2) ||
       (radiusAngle> 0 && (qnearOrientation>=PI/2 || qnearOrientation<-PI/2)) )
   {
-    // right turn 
-    newRadiusAngle = (radiusAngle+deltaTheta>PI)?(radiusAngle+deltaTheta-2*PI):(radiusAngle+deltaTheta);
-    //std::cerr<<"newradiusangle="<<newRadiusAngle<<"\n";
-    qnew[0] += turnRadius*cos(newRadiusAngle);
-    qnew[1] += turnRadius*sin(newRadiusAngle);
-    newSteeringAngle = asin(wheelBase/(trackSize/2-turnRadius));
-    //qnew[2] = 0;
-    qnew[2] = -((newRadiusAngle+(PI/2)>PI)?(newRadiusAngle+(PI/2)-(2*PI)):(newRadiusAngle+(PI/2)));
-    //std::cerr<<"right";
+    // right turn
+
+    //forward
+    if( (angleDiff > 0.0 && angleDiff < PI) ||
+        (angleDiff < -PI) )
+    {
+      newRadiusAngle = (radiusAngle+deltaTheta>PI)?(radiusAngle+deltaTheta-2*PI):(radiusAngle+deltaTheta);
+      //std::cerr<<"newradiusangle="<<newRadiusAngle<<"\n";
+      qnew[0] += turnRadius*cos(newRadiusAngle);
+      qnew[1] += turnRadius*sin(newRadiusAngle);
+      newSteeringAngle = asin(wheelBase/(trackSize/2-turnRadius));
+      //qnew[2] = 0;
+      qnew[2] = -((newRadiusAngle+(PI/2)>PI)?(newRadiusAngle+(PI/2)-(2*PI)):(newRadiusAngle+(PI/2)));
+      //std::cerr<<"right";
+    } else //backward
+    {
+      newRadiusAngle = (radiusAngle-deltaTheta<-PI)?(radiusAngle-deltaTheta+2*PI):(radiusAngle-deltaTheta);
+      //std::cerr<<"newradiusangle="<<newRadiusAngle<<"\n";
+      qnew[0] += turnRadius*cos(newRadiusAngle);
+      qnew[1] += turnRadius*sin(newRadiusAngle);
+      newSteeringAngle = asin(wheelBase/(trackSize/2-turnRadius));
+      //qnew[2] = 0;
+      qnew[2] = -((newRadiusAngle+(PI/2)>PI)?(newRadiusAngle+(PI/2)-(2*PI)):(newRadiusAngle+(PI/2)));
+    }
   }
   else if( (radiusAngle< 0 && (qnearOrientation>PI/2 || qnearOrientation<=-PI/2)) ||
            (radiusAngle> 0 && qnearOrientation<PI/2 && qnearOrientation>=-PI/2) )
   {
     // left turn
-    newRadiusAngle = (radiusAngle-deltaTheta<-PI)?(radiusAngle-deltaTheta+2*PI):(radiusAngle-deltaTheta);
-    //std::cerr<<"newradiusangle="<<newRadiusAngle<<"\n";
-    qnew[0] += turnRadius*cos(newRadiusAngle);
-    qnew[1] += turnRadius*sin(newRadiusAngle);
-    newSteeringAngle = asin(wheelBase/(trackSize/2-turnRadius));
-    qnew[2] = -((newRadiusAngle-(PI/2)<-PI)?(newRadiusAngle-(PI/2)+(2*PI)):(newRadiusAngle-(PI/2)));
-    //std::cerr<<"left";
+
+    //forward
+    if( (angleDiff < 0.0 && angleDiff > -PI) ||
+        (angleDiff > PI) )
+    {
+      newRadiusAngle = (radiusAngle-deltaTheta<-PI)?(radiusAngle-deltaTheta+2*PI):(radiusAngle-deltaTheta);
+      //std::cerr<<"newradiusangle="<<newRadiusAngle<<"\n";
+      qnew[0] += turnRadius*cos(newRadiusAngle);
+      qnew[1] += turnRadius*sin(newRadiusAngle);
+      newSteeringAngle = asin(wheelBase/(trackSize/2-turnRadius));
+      qnew[2] = -((newRadiusAngle-(PI/2)<-PI)?(newRadiusAngle-(PI/2)+(2*PI)):(newRadiusAngle-(PI/2)));
+      //std::cerr<<"left";
+    } else //backward
+    {
+      newRadiusAngle = (radiusAngle+deltaTheta>PI)?(radiusAngle+deltaTheta-2*PI):(radiusAngle+deltaTheta);
+      //std::cerr<<"newradiusangle="<<newRadiusAngle<<"\n";
+      qnew[0] += turnRadius*cos(newRadiusAngle);
+      qnew[1] += turnRadius*sin(newRadiusAngle);
+      newSteeringAngle = asin(wheelBase/(trackSize/2-turnRadius));
+      qnew[2] = -((newRadiusAngle-(PI/2)<-PI)?(newRadiusAngle-(PI/2)+(2*PI)):(newRadiusAngle-(PI/2)));
+    }
+    
   }
   else
   {

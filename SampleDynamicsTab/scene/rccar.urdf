@@ -1,0 +1,57 @@
+<!-- rccar.urdf -->
+
+<robot name="rccar">
+
+	<!-- Link 0 -->
+	<link name="L0">
+	  
+	</link>
+
+	<!-- Link 1 -->
+	<link name="L1">
+	  
+	</link>
+
+	<!-- Link 2 -->
+	<link name="L2">
+	  
+	</link>
+
+	<!-- Link 3 -->
+	<link name="L3">
+		<visual>
+			<geometry>
+				<mesh filename="objects/RC CAR.3DS"/>
+			</geometry>
+		</visual>
+	</link>
+
+  	<!-- JOINT DEFINITIONS -->
+
+	<!-- J1 -->
+	<joint name="J1" type="prismatic">
+		<parent link="L0" />
+		<child link="L1" />
+		<origin xyz = "0 0 0" rpy="0 0 0" />
+		<axis xyz="1 0 0" />
+		<limit effort="1000" lower="-5" upper="5" velocity="0.1" />
+	</joint>
+
+	<!-- J2 -->
+	<joint name="J2" type="prismatic">
+		<parent link="L1" />
+		<child link="L2" />
+		<origin xyz = "0 0 0" rpy="0 0 0" />
+		<axis xyz="0 0 1" />
+		<limit effort="1000" lower="-5" upper="5" velocity="0.1" />
+	</joint>
+
+  <!-- J3 -->
+  <joint name="J3" type="revolute">
+		<parent link="L2" />
+		<child link="L3" />
+		<origin xyz="0 0 0" rpy="0 0 0" />
+		<axis xyz="0 1 0" />
+		<limit effort="1000" lower="-3.1416" upper="3.1416" velocity="0.1" />
+	</joint>
+</object>

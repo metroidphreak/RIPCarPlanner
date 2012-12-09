@@ -80,7 +80,7 @@ bool RRT::connect( const Eigen::VectorXd &_target ) {
   
   int NNIdx = getNearestNeighbor( _target );
   StepResult result = STEP_PROGRESS;
-  std::cerr<<_target[0]<<"  "<<_target[1]<<"  "<<_target[2]<<"\n";
+  //std::cerr<<_target[0]<<"  "<<_target[1]<<"  "<<_target[2]<<"\n";
   result = tryStepFromNodeWithHolonomicForConnect( _target, NNIdx );
   NNIdx = configVector.size() -1;
   return ( result == STEP_REACHED );
@@ -110,8 +110,8 @@ RRT::StepResult RRT::tryStep( const Eigen::VectorXd &_qtry ) {
  * @brief Tries to extend tree towards provided sample (must be overridden for MBP ) 
  */
 RRT::StepResult RRT::tryStepFromNode( const Eigen::VectorXd &_qtry, int _NNIdx ) {
-  std::cerr<<"kkk";
-  std::cin>>_NNIdx;
+  //std::cerr<<"kkk";
+  //std::cin>>_NNIdx;
   /// Calculates a new node to grow towards _qtry, check for collisions and adds to tree 
   Eigen::VectorXd qnear = configVector[_NNIdx];
   /// Compute direction and magnitude
@@ -149,7 +149,7 @@ RRT::StepResult RRT::tryStepFromNodeWithHolonomic( const Eigen::VectorXd &_qtry,
   Eigen::VectorXd qtry = _qtry;
   qtry[2] = qnear[2];
 
-  std::cerr<<"aa"<<qnear[0]<<"  "<<qnear[1]<<"  "<<-qnear[2]<<"\n";
+  //std::cerr<<"aa"<<qnear[0]<<"  "<<qnear[1]<<"  "<<-qnear[2]<<"\n";
   
   /// Compute direction and magnitude
   Eigen::VectorXd diff = qtry - qnear;
@@ -163,9 +163,9 @@ RRT::StepResult RRT::tryStepFromNodeWithHolonomic( const Eigen::VectorXd &_qtry,
   
   // perpendicular bisector between start and goal
   double a=sum[0],b=sum[1];
-  std::cerr<<"a="<<a<<"b="<<b<<"\n";
+  //std::cerr<<"a="<<a<<"b="<<b<<"\n";
   double slopePerpendicularBisector=(qtry[0]-qnear[0])/(qnear[1]-qtry[1]);
-  std::cerr<<"slope="<<slopePerpendicularBisector<<"\n";
+  //std::cerr<<"slope="<<slopePerpendicularBisector<<"\n";
   double a1,b1,c1;
   double a2,b2,c2;
   
@@ -177,19 +177,19 @@ RRT::StepResult RRT::tryStepFromNodeWithHolonomic( const Eigen::VectorXd &_qtry,
   b2 = qnearOrientation;
   c2 = qnear[0] + (b2*qnear[1]);
   
-  std::cerr<<a1<<"  "<<b1<<"  "<<c1<<"  "<<a2<<"  "<<b2<<"  "<<c2<<"\n";
+  //std::cerr<<a1<<"  "<<b1<<"  "<<c1<<"  "<<a2<<"  "<<b2<<"  "<<c2<<"\n";
   Eigen::VectorXd centerOfArc = qnear;
   centerOfArc[0] = ((c1*b2)-(c2*b1))/((a1*b2)-(a2*b1));
   centerOfArc[1] = ((a1*c2)-(a2*c1))/((a1*b2)-(a2*b1));
   double turnRadius = (centerOfArc-qnear).norm();
-  std::cerr<<"center="<<centerOfArc[0]<<"  "<<centerOfArc[1]<<"  "<<turnRadius<<"\n";
+  //std::cerr<<"center="<<centerOfArc[0]<<"  "<<centerOfArc[1]<<"  "<<turnRadius<<"\n";
   
     
   if( turnRadius < minTurnRadius )
   {
     return STEP_COLLISION;
   }
-  std::cerr<<"dist="<<dist<<"\n";
+  //std::cerr<<"dist="<<dist<<"\n";
   double angleSubtended = 2*asin(0.5*dist/turnRadius);
   double arcLength = angleSubtended*turnRadius;
   
@@ -201,41 +201,41 @@ RRT::StepResult RRT::tryStepFromNodeWithHolonomic( const Eigen::VectorXd &_qtry,
   Eigen::VectorXd qnew = centerOfArc;
   double deltaTheta = angleSubtended*(stepSize/arcLength);
   
-  std::cerr<<angleSubtended<<"  "<<arcLength<<"  "<<deltaTheta<<"\n";
+  //std::cerr<<angleSubtended<<"  "<<arcLength<<"  "<<deltaTheta<<"\n";
   //qnew[0] += diff*(stepSize/arcLength);
   double newRadiusAngle;
-  std::cerr<<"angles"<<radiusAngle<<"  "<<qnearOrientation<<"\n";
+  //std::cerr<<"angles"<<radiusAngle<<"  "<<qnearOrientation<<"\n";
   if( (radiusAngle< 0 && qnearOrientation<=PI/2 && qnearOrientation>-PI/2) ||
       (radiusAngle> 0 && (qnearOrientation>=PI/2 || qnearOrientation<-PI/2)) )
   {
     // right turn 
     newRadiusAngle = (radiusAngle+deltaTheta>PI)?(radiusAngle+deltaTheta-2*PI):(radiusAngle+deltaTheta);
-    std::cerr<<"newradiusangle="<<newRadiusAngle<<"\n";
+    //std::cerr<<"newradiusangle="<<newRadiusAngle<<"\n";
     qnew[0] += turnRadius*cos(newRadiusAngle);
     qnew[1] += turnRadius*sin(newRadiusAngle);
     newSteeringAngle = asin(wheelBase/(trackSize/2-turnRadius));
     //qnew[2] = 0;
     qnew[2] = -((newRadiusAngle+(PI/2)>PI)?(newRadiusAngle+(PI/2)-(2*PI)):(newRadiusAngle+(PI/2)));
-    std::cerr<<"right";
+    //std::cerr<<"right";
   }
   else if( (radiusAngle< 0 && (qnearOrientation>PI/2 || qnearOrientation<=-PI/2)) ||
            (radiusAngle> 0 && qnearOrientation<PI/2 && qnearOrientation>=-PI/2) )
   {
     // left turn
     newRadiusAngle = (radiusAngle-deltaTheta<-PI)?(radiusAngle-deltaTheta+2*PI):(radiusAngle-deltaTheta);
-    std::cerr<<"newradiusangle="<<newRadiusAngle<<"\n";
+    //std::cerr<<"newradiusangle="<<newRadiusAngle<<"\n";
     qnew[0] += turnRadius*cos(newRadiusAngle);
     qnew[1] += turnRadius*sin(newRadiusAngle);
     newSteeringAngle = asin(wheelBase/(trackSize/2-turnRadius));
     qnew[2] = -((newRadiusAngle-(PI/2)<-PI)?(newRadiusAngle-(PI/2)+(2*PI)):(newRadiusAngle-(PI/2)));
-    std::cerr<<"left";
+    //std::cerr<<"left";
   }
   else
   {
     return STEP_COLLISION;
   }
-  std::cin>>a1;
-  std::cerr<<"\n\n";
+  //std::cin>>a1;
+  //std::cerr<<"\n\n";
   //double roll, pitch, yaw;
   //world->getRobot(robotId)->getRotationRPY(roll,pitch,yaw);
   
@@ -270,7 +270,7 @@ RRT::StepResult RRT::tryStepFromNodeWithHolonomicForConnect( const Eigen::Vector
   Eigen::VectorXd qtry = _qtry;
   qtry[2] = qnear[2];
 
-  std::cerr<<"aa"<<qnear[0]<<"  "<<qnear[1]<<"  "<<-qnear[2]<<"\n";
+  //std::cerr<<"aa"<<qnear[0]<<"  "<<qnear[1]<<"  "<<-qnear[2]<<"\n";
   
   /// Compute direction and magnitude
   Eigen::VectorXd diff = qtry - qnear;
@@ -284,9 +284,9 @@ RRT::StepResult RRT::tryStepFromNodeWithHolonomicForConnect( const Eigen::Vector
   
   // perpendicular bisector between start and goal
   double a=sum[0],b=sum[1];
-  std::cerr<<"a="<<a<<"b="<<b<<"\n";
+  //std::cerr<<"a="<<a<<"b="<<b<<"\n";
   double slopePerpendicularBisector=(qtry[0]-qnear[0])/(qnear[1]-qtry[1]);
-  std::cerr<<"slope="<<slopePerpendicularBisector<<"\n";
+  //std::cerr<<"slope="<<slopePerpendicularBisector<<"\n";
   double a1,b1,c1;
   double a2,b2,c2;
   
@@ -298,19 +298,19 @@ RRT::StepResult RRT::tryStepFromNodeWithHolonomicForConnect( const Eigen::Vector
   b2 = qnearOrientation;
   c2 = qnear[0] + (b2*qnear[1]);
   
-  std::cerr<<a1<<"  "<<b1<<"  "<<c1<<"  "<<a2<<"  "<<b2<<"  "<<c2<<"\n";
+  //std::cerr<<a1<<"  "<<b1<<"  "<<c1<<"  "<<a2<<"  "<<b2<<"  "<<c2<<"\n";
   Eigen::VectorXd centerOfArc = qnear;
   centerOfArc[0] = ((c1*b2)-(c2*b1))/((a1*b2)-(a2*b1));
   centerOfArc[1] = ((a1*c2)-(a2*c1))/((a1*b2)-(a2*b1));
   double turnRadius = (centerOfArc-qnear).norm();
-  std::cerr<<"center="<<centerOfArc[0]<<"  "<<centerOfArc[1]<<"  "<<turnRadius<<"\n";
+  //std::cerr<<"center="<<centerOfArc[0]<<"  "<<centerOfArc[1]<<"  "<<turnRadius<<"\n";
   
     
   if( turnRadius < minTurnRadius )
   {
     return STEP_COLLISION;
   }
-  std::cerr<<"dist="<<dist<<"\n";
+  //std::cerr<<"dist="<<dist<<"\n";
   double angleSubtended = 2*asin(0.5*dist/turnRadius);
   double arcLength = angleSubtended*turnRadius;
   
@@ -322,10 +322,10 @@ RRT::StepResult RRT::tryStepFromNodeWithHolonomicForConnect( const Eigen::Vector
   Eigen::VectorXd qnew = centerOfArc;
   double deltaTheta = angleSubtended*(stepSize/arcLength);
   
-  std::cerr<<angleSubtended<<"  "<<arcLength<<"  "<<deltaTheta<<"\n";
+  //std::cerr<<angleSubtended<<"  "<<arcLength<<"  "<<deltaTheta<<"\n";
   //qnew[0] += diff*(stepSize/arcLength);
   double newRadiusAngle=radiusAngle;
-  std::cerr<<"angles"<<radiusAngle<<"  "<<qnearOrientation<<"\n";
+  //std::cerr<<"angles"<<radiusAngle<<"  "<<qnearOrientation<<"\n";
   RRT::StepResult result=STEP_PROGRESS;
   while( result == STEP_PROGRESS )
   {
@@ -334,32 +334,32 @@ RRT::StepResult RRT::tryStepFromNodeWithHolonomicForConnect( const Eigen::Vector
     {
       // right turn 
       newRadiusAngle = (newRadiusAngle+deltaTheta>PI)?(newRadiusAngle+deltaTheta-2*PI):(newRadiusAngle+deltaTheta);
-      std::cerr<<"newradiusangle="<<newRadiusAngle<<"\n";
+      //std::cerr<<"newradiusangle="<<newRadiusAngle<<"\n";
       qnew[0] = centerOfArc[0]+turnRadius*cos(newRadiusAngle);
       qnew[1] = centerOfArc[1]+turnRadius*sin(newRadiusAngle);
       newSteeringAngle = asin(wheelBase/(trackSize/2-turnRadius));
       //qnew[2] = 0;
       qnew[2] = -((newRadiusAngle+(PI/2)>PI)?(newRadiusAngle+(PI/2)-(2*PI)):(newRadiusAngle+(PI/2)));
-      std::cerr<<"right";
+      //std::cerr<<"right";
     }
     else if( (radiusAngle< 0 && (qnearOrientation>PI/2 || qnearOrientation<=-PI/2)) ||
              (radiusAngle> 0 && qnearOrientation<PI/2 && qnearOrientation>=-PI/2) )
     {
       // left turn
       newRadiusAngle = (newRadiusAngle-deltaTheta<-PI)?(newRadiusAngle-deltaTheta+2*PI):(newRadiusAngle-deltaTheta);
-      std::cerr<<"newradiusangle="<<newRadiusAngle<<"\n";
+      //std::cerr<<"newradiusangle="<<newRadiusAngle<<"\n";
       qnew[0] = centerOfArc[0]+turnRadius*cos(newRadiusAngle);
       qnew[1] = centerOfArc[1]+turnRadius*sin(newRadiusAngle);
       newSteeringAngle = asin(wheelBase/(trackSize/2-turnRadius));
       qnew[2] = -((newRadiusAngle-(PI/2)<-PI)?(newRadiusAngle-(PI/2)+(2*PI)):(newRadiusAngle-(PI/2)));
-      std::cerr<<"left";
+      //std::cerr<<"left";
     }
     else
     {
       return STEP_COLLISION;
     }
    // std::cin>>a1;
-    std::cerr<<"\n\n";
+    //std::cerr<<"\n\n";
     //double roll, pitch, yaw;
     //world->getRobot(robotId)->getRotationRPY(roll,pitch,yaw);
     
@@ -390,7 +390,7 @@ int RRT::addNode( const Eigen::VectorXd &_qnew, int _parentId )
 {
   /// Update graph vectors -- what does this mean?
   //std::cerr<<configVector.size()<<std::endl;
-  std::cerr<<"adding"<<_qnew[0]<<"  "<<_qnew[1]<<"  "<<_qnew[2]<<"\n";
+  //std::cerr<<"adding"<<_qnew[0]<<"  "<<_qnew[1]<<"  "<<_qnew[2]<<"\n";
   
   configVector.push_back( _qnew );
   parentVector.push_back( _parentId );

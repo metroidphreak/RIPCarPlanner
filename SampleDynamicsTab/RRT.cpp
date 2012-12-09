@@ -268,13 +268,13 @@ RRT::StepResult RRT::tryStepFromNodeWithHolonomicForConnect( const Eigen::Vector
   double qnearSteeringAngle = steeringAngleVector[_NNIdx];
   double newSteeringAngle;
   Eigen::VectorXd qtry = _qtry;
-  qtry[2] = qnear[2];
+  qtry[2] = qnear[2];   // This is done to avoid making the end orientation contribute to the norm. The end orientation does not matter.
 
   //std::cerr<<"aa"<<qnear[0]<<"  "<<qnear[1]<<"  "<<-qnear[2]<<"\n";
   
   /// Compute direction and magnitude
   Eigen::VectorXd diff = qtry - qnear;
-  Eigen::VectorXd sum = (qtry + qnear)/2;
+  Eigen::VectorXd midPoint = (qtry + qnear)/2;
   
   double dist = diff.norm();
   if( dist < stepSize )
@@ -283,7 +283,7 @@ RRT::StepResult RRT::tryStepFromNodeWithHolonomicForConnect( const Eigen::Vector
   }
   
   // perpendicular bisector between start and goal
-  double a=sum[0],b=sum[1];
+  double a=midPoint[0],b=midPoint[1];
   //std::cerr<<"a="<<a<<"b="<<b<<"\n";
   double slopePerpendicularBisector=(qtry[0]-qnear[0])/(qnear[1]-qtry[1]);
   //std::cerr<<"slope="<<slopePerpendicularBisector<<"\n";
@@ -324,7 +324,7 @@ RRT::StepResult RRT::tryStepFromNodeWithHolonomicForConnect( const Eigen::Vector
   
   //std::cerr<<angleSubtended<<"  "<<arcLength<<"  "<<deltaTheta<<"\n";
   //qnew[0] += diff*(stepSize/arcLength);
-  double newRadiusAngle=radiusAngle;
+  double newRadiusAngle = radiusAngle;
   //std::cerr<<"angles"<<radiusAngle<<"  "<<qnearOrientation<<"\n";
   RRT::StepResult result=STEP_PROGRESS;
   while( result == STEP_PROGRESS )
@@ -338,7 +338,6 @@ RRT::StepResult RRT::tryStepFromNodeWithHolonomicForConnect( const Eigen::Vector
       qnew[0] = centerOfArc[0]+turnRadius*cos(newRadiusAngle);
       qnew[1] = centerOfArc[1]+turnRadius*sin(newRadiusAngle);
       newSteeringAngle = asin(wheelBase/(trackSize/2-turnRadius));
-      //qnew[2] = 0;
       qnew[2] = -((newRadiusAngle+(PI/2)>PI)?(newRadiusAngle+(PI/2)-(2*PI)):(newRadiusAngle+(PI/2)));
       //std::cerr<<"right";
     }

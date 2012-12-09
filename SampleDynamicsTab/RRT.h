@@ -50,7 +50,7 @@ public:
     double wheelBase; // Distance from front to rear wheel
     double speed;     // Constant velocity model
     double timeStep;  // Time for each step. speed and timeStep can be avoided by using the stepSize every time.
-    
+    bool reverseGear; // Allow backing up.
   
     int activeNode;
     std::vector<int> parentVector; /**< Vector of indices to relate configs in RRT */
@@ -81,11 +81,7 @@ public:
     /// Try to advance one stepSize towards qtry
     StepResult tryStep( const Eigen::VectorXd &_qtry );
 
-    /// Tries to extend tree towards provided sample (must be overridden for MBP ) 
-    virtual StepResult tryStepFromNode( const Eigen::VectorXd &_qtry, int _NNIdx );
     
-    /// Tries to extend tree towards provided sample (must be overridden for MBP ) 
-    virtual StepResult tryStepFromNodeWithHolonomic( const Eigen::VectorXd &_qtry, int _NNIdx );
     
     /// Add qnew to tree with parent _parentId
     int addNode( const Eigen::VectorXd &_qnew, int _parentId );  
@@ -99,6 +95,8 @@ public:
     /// Get the gap (Distance) between the closest node in the tree to the _target
     double getGap( const Eigen::VectorXd &_target );
     
+    double getGap( const Eigen::VectorXd &_source , Eigen::VectorXd &_target );
+    
     /// Traces the path from some node to the initConfig node
     void tracePath( int _node, std::list<Eigen::VectorXd> &_path, bool _reverse = false );
     
@@ -111,7 +109,17 @@ protected:
    
    /// Get random number between min and max
    double randomInRange( double _min, double _max );
-     
+
+private:
+    /// Tries to extend tree towards provided sample (must be overridden for MBP ) 
+    virtual StepResult tryStepFromNode( const Eigen::VectorXd &_qtry, int _NNIdx );
+    
+    /// Tries to extend tree towards provided sample (must be overridden for MBP ) 
+    virtual StepResult tryStepFromNodeWithHolonomic( const Eigen::VectorXd &_qtry, int _NNIdx );  
+
+    /// Tries to extend tree towards provided sample (must be overridden for MBP ) 
+    virtual StepResult tryStepFromNodeWithHolonomicForConnect( const Eigen::VectorXd &_qtry, int _NNIdx );  
+
 };
 
 #endif /** _RRT_H_ */

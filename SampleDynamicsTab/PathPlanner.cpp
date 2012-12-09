@@ -30,7 +30,7 @@ PathPlanner::PathPlanner( robotics::World &_world,
                           bool _copyWorld, double _stepSize ) {
   
   copyWorld = _copyWorld;
-  
+
   if( copyWorld ) {
     printf( "Do not use this option yet \n" );
   } else {
@@ -104,7 +104,7 @@ bool PathPlanner::planSingleTreeRrt( int _robotId,
   
   RRT rrt( world, _robotId, _links, _start, stepSize );
   RRT::StepResult result = RRT::STEP_PROGRESS;
-  
+
   double smallestGap = DBL_MAX;
   const double greedyProbabilityThreshold = 0.50;
   while ( result != RRT::STEP_REACHED && smallestGap > stepSize )

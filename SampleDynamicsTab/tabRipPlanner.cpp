@@ -331,6 +331,57 @@ void RipPlannerTab::OnButton(wxCommandEvent &evt) {
     /** Execute Plan */
   case button_Plan:
     {         
+      if ( mWorld != NULL )
+      {
+        if( mWorld->getNumRobots() < 1)
+        {
+	        std::cout << "(!) Must have a world with a robot to set a Start state" << std::endl;
+	        break;
+        }
+        std::cout << "(i) Setting Start state for " << mWorld->getRobot(mRobotId)->getName() << ":" << std::endl;
+        
+        mStartConf = mWorld->getRobot(mRobotId)->getQuickDofs();
+        mStartConf[0] = 0;
+        mStartConf[1] = 0;
+        //mStartConf[2] = 0;
+        
+        for( unsigned int i = 0; i < mStartConf.size(); i++ )
+    	  { 
+    	    std::cout << mStartConf(i) << " ";
+    	  } 
+        std::cout << std::endl;
+      }
+      else
+      {
+        std::cout << "(!) Must have a world loaded to set a Start state." << std::endl;
+      }
+      
+      if ( mWorld != NULL )
+      {
+        if( mWorld->getNumRobots() < 1)
+        {
+	        std::cout << "(!) Must have a world with a robot to set a Goal state.(!)" << std::endl;
+	        break;
+        }
+        std::cout << "(i) Setting Goal state for " << mWorld->getRobot(mRobotId)->getName() << ":" << std::endl;
+        
+        mGoalConf = mWorld->getRobot(mRobotId)->getQuickDofs();
+        mGoalConf[0] = 2.7;
+        mGoalConf[1] = -0.92;
+        //mGoalConf[2] = 0;
+        
+        for( unsigned int i = 0; i < mGoalConf.size(); i++ )
+	      {
+	        std::cout << mGoalConf(i) << " ";
+	      } 
+        std::cout << std::endl;
+      }
+      else 
+      {
+        std::cout << "(!) Must have a world loaded to set a Goal state"<< std::endl;
+      }
+     
+    
       if( mGoalConf.size() < 0 ){ std::cout << "(x) Must set a goal" << std::endl; break; }
       if( mStartConf.size() < 0 ){ std::cout << "(x) Must set a start" << std::endl; break; }
       if( mWorld == NULL ){ std::cout << "(x) Must load a world" << std::endl; break; }

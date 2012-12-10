@@ -10,12 +10,12 @@
     </inertial>
     <collision>
       <geometry>
-        <mesh filename="objects/floor.3DS"/>
+        <mesh filename="objects/wallMed.3DS"/>
       </geometry>
     </collision>
     <visual>
       <geometry>
-        <mesh filename="objects/floor.3DS"/>
+        <mesh filename="objects/wallMed.3DS"/>
       </geometry>
     </visual>
   </link>

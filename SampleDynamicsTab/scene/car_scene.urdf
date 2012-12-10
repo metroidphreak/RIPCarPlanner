@@ -5,201 +5,104 @@
   <include filename="sphere_blue.urdf" model_name="sphere_blue"/>
   <include filename="cube.urdf" model_name="cube"/>
   <include filename="polarbear.urdf" model_name="polarbear"/>
-  <include filename="luggage3.urdf" model_name="luggage3"/>
+  <include filename="wall.urdf" model_name="wall"/>
+  <include filename="wallMed.urdf" model_name="wallMed"/>
+  <include filename="wallLong.urdf" model_name="wallLong"/>
   <include filename="rccar.urdf" model_name="rccar"/>
   
   <!-- construct world -->
 
   <entity model="rccar">
-	  <origin xyz="0 0 3.5" rpy="1.32 0 0"/>
+	  <origin xyz="0 0 3.20" rpy="1.32 0 0"/>
   </entity>
 
   <entity model="floor" name="floor">
-    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <origin xyz="5 0 0" rpy="1.570796 0 0"/>
   </entity>
 
   <entity model="polarbear" name="polarbear">
-    <origin xyz="4 0.75 1" rpy="1.7 0 -0.9"/>
-  </entity>
-  
-  <entity model="sphere_red" name="sphere 1">
-    <origin xyz="0 3 1" rpy="0 0 0"/>
+    <origin xyz="3.73 0.13 0.46" rpy="1.7 0 -0.9"/>
   </entity>
 
-  <entity model="sphere_blue" name="sphere 4">
-    <origin xyz="0 -3 1" rpy="0 0 0"/>
+  <entity model="wallLong" name="Top1">
+    <origin xyz="-2 -0.1 0.1" rpy="0 -1.570796 -1.570796"/>
   </entity>
 
-  <entity model="sphere_blue" name="sphere 2">
-    <origin xyz="1 1 1" rpy="0 0 0"/>
+  <entity model="wallLong" name="Top2">
+    <origin xyz="-2 5 0.1" rpy="0 -1.570796 -1.570796"/>
   </entity>
 
-  <entity model="sphere_blue" name="sphere 3">
-    <origin xyz="1 2.2 1" rpy="0 0 0"/>
+  <entity model="wallLong" name="Side1">
+    <origin xyz="-1.87 -5 0.1" rpy="1.13446401 -1.570796 -1.570796"/>
   </entity>
 
-  <entity model="sphere_blue" name="sphere 3">
-    <origin xyz="1.5 0 1" rpy="0 0 0"/>
+  <entity model="wallLong" name="Side2">
+    <origin xyz="-2 5.07 0.1" rpy="1.570796 -1.570796 -1.570796"/>
   </entity>
 
-  <entity model="sphere_blue" name="sphere 4">
-    <origin xyz="5 0 1" rpy="0 0 0"/>
+  <entity model="wallLong" name="Side3">
+    <origin xyz="2.65 5.6 0.1" rpy="0.872664626 -1.570796 -1.570796"/>
   </entity>
 
-  <entity model="sphere_blue" name="sphere 5">
-    <origin xyz="4.2 -2.3 1" rpy="0 0 0"/>
+  <entity model="wallLong" name="Side4">
+    <origin xyz="2.7 -7 0.1" rpy="1.570796 -1.570796 -1.570796"/>
   </entity>
 
-  <entity model="sphere_blue" name="sphere 6">
-    <origin xyz="5 -3.2 1" rpy="0 0 0"/>
+  <entity model="wallLong" name="Side5">
+    <origin xyz="10 3.6 0.1" rpy="0 -1.570796 -1.570796"/>
   </entity>
 
-  <entity model="sphere_blue" name="sphere 7">
-    <origin xyz="-2 0 1" rpy="0 0 0"/>
+  <entity model="wallLong" name="Side6">
+    <origin xyz="10 -1.5 0.1" rpy="-0.20943951 -1.570796 -1.570796"/>
   </entity>
 
-  <entity model="sphere_blue" name="sphere 8">
-    <origin xyz="0 -4.2 1" rpy="0 0 0"/>
+  <entity model="wallLong" name="Inner1">
+    <origin xyz="-0.8 3.87 0.1" rpy="0.575958653 -1.570796 -1.570796"/>
   </entity>
 
-  <entity model="sphere_blue" name="sphere 9">
-    <origin xyz="-1.2 -3 1" rpy="0 0 0"/>
+  <entity model="wallLong" name="Inner2">
+    <origin xyz="-1.87 -3.07 0.1" rpy="1.46607657 -1.570796 -1.570796"/>
   </entity>
 
-  <entity model="sphere_blue" name="sphere 10">
-    <origin xyz="1.2 -3 1" rpy="0 0 0"/>
+  <entity model="wallMed" name="wallMed1">
+    <origin xyz="4.5 0 0.1" rpy="0 -1.570796 0"/>
   </entity>
 
-  <entity model="sphere_blue" name="sphere 11">
-    <origin xyz="2.3 -3.5 1" rpy="0 0 0"/>
+  <entity model="wallMed" name="wallMed2">
+    <origin xyz="7.07 -0.27 0.1" rpy="-1.22173048 -1.570796 0"/>
   </entity>
 
-  <entity model="sphere_blue" name="sphere 12">
-    <origin xyz="6.1 0 1" rpy="0 0 0"/>
+  <entity model="wallMed" name="wallMed3">
+    <origin xyz="3.73 -0.4 0.1" rpy="-1.30899694 -1.570796 0"/>
   </entity>
 
-  <entity model="sphere_blue" name="sphere 13">
-    <origin xyz="1 5 1" rpy="0 0 0"/>
+  <entity model="wallMed" name="wallMed4">
+    <origin xyz="2 2.8 0.1" rpy="-0.959931089 -1.570796 0"/>
   </entity>
 
-  <entity model="sphere_blue" name="sphere 14">
-    <origin xyz="2 4.8 1" rpy="0 0 0"/>
+  <entity model="wall" name="wall1">
+    <origin xyz="7.87 -2.67 0.1" rpy="-2.00712864 -1.570796 0"/>
   </entity>
 
-  <entity model="sphere_blue" name="sphere 15">
-    <origin xyz="3 4.6 1" rpy="0 0 0"/>
+  <entity model="wall" name="wall2">
+    <origin xyz="0 0 0.1" rpy="0 -1.570796 0"/>
   </entity>
 
-  <entity model="sphere_blue" name="sphere 16">
-    <origin xyz="4 4.4 1" rpy="0 0 0"/>
+  <entity model="wall" name="wall3">
+    <origin xyz="4.4 -2.93 0.1" rpy="0.34906585 -1.570796 0"/>
   </entity>
 
-  <entity model="sphere_blue" name="sphere 17">
-    <origin xyz="5 3.6 1" rpy="0 0 0"/>
-  </entity>
-
-  <entity model="sphere_blue" name="sphere 18">
-    <origin xyz="6 2.8 1" rpy="0 0 0"/>
+  <entity model="wall" name="wall4">
+    <origin xyz="5.47 -2.53 0.1" rpy="0.122173048 -1.570796 0"/>
   </entity>
 
   <entity model="sphere_blue" name="sphere 19">
-    <origin xyz="7.2 0 1" rpy="0 0 0"/>
-  </entity>
-
-  <entity model="sphere_blue" name="sphere 20">
-    <origin xyz="1 -6 1" rpy="0 0 0"/>
-  </entity>
-
-  <entity model="sphere_blue" name="sphere 21">
-    <origin xyz="2 -6.8 1" rpy="0 0 0"/>
-  </entity>
-
-  <entity model="sphere_blue" name="sphere 22">
-    <origin xyz="3 -6.6 1" rpy="0 0 0"/>
-  </entity>
-
-  <entity model="sphere_blue" name="sphere 23">
-    <origin xyz="4 -6.4 1" rpy="0 0 0"/>
-  </entity>
-
-  <entity model="sphere_blue" name="sphere 24">
-    <origin xyz="5 -6.6 1" rpy="0 0 0"/>
-  </entity>
-
-  <entity model="sphere_blue" name="sphere 25">
-    <origin xyz="6 -2.8 1" rpy="0 0 0"/>
-  </entity>
-
-  <entity model="sphere_blue" name="sphere 26">
-    <origin xyz="4.2 -1 1" rpy="0 0 0"/>
-  </entity>
-
-  <entity model="sphere_blue" name="sphere 19">
-    <origin xyz="8.0 -0.75 1" rpy="0 0 0"/>
-  </entity>
-
-  <entity model="sphere_blue" name="sphere 19">
-    <origin xyz="8.0 -1.8 1" rpy="0 0 0"/>
-  </entity>
-
-  <entity model="sphere_blue" name="sphere 19">
-    <origin xyz="8.2 -2.8 1" rpy="0 0 0"/>
-  </entity>
-
-  <entity model="sphere_blue" name="sphere 19">
-    <origin xyz="7 -5 1" rpy="0 0 0"/>
-  </entity>
-
-  <entity model="sphere_blue" name="sphere 19">
-    <origin xyz="6.0 -7.2 1" rpy="0 0 0"/>
-  </entity>
-
-  <entity model="sphere_blue" name="sphere 19">
-    <origin xyz="7.1 -7.5 1" rpy="0 0 0"/>
-  </entity>
-
-  <entity model="sphere_blue" name="sphere 19">
-    <origin xyz="9 -6 1" rpy="0 0 0"/>
-  </entity>
-
-  <entity model="sphere_blue" name="sphere 19">
-    <origin xyz="9.5 -5 1" rpy="0 0 0"/>
-  </entity>
-
-  <entity model="sphere_blue" name="sphere 19">
-    <origin xyz="10 -4 1" rpy="0 0 0"/>
-  </entity>
-
-  <entity model="sphere_blue" name="sphere 19">
-    <origin xyz="10.2 -2.9 1" rpy="0 0 0"/>
-  </entity>
-
-  <entity model="sphere_blue" name="sphere 19">
-    <origin xyz="10.2 -1.8 1" rpy="0 0 0"/>
-  </entity>
-
-  <entity model="sphere_blue" name="sphere 19">
-    <origin xyz="10.4 -0.7 1" rpy="0 0 0"/>
-  </entity>
-
-  <entity model="sphere_blue" name="sphere 19">
-    <origin xyz="10.2 0.8 1" rpy="0 0 0"/>
-  </entity>
-
-  <entity model="sphere_blue" name="sphere 19">
-    <origin xyz="10.2 1.9 1" rpy="0 0 0"/>
-  </entity>
-
-  <entity model="sphere_blue" name="sphere 19">
-    <origin xyz="10.2 3 1" rpy="0 0 0"/>
-  </entity>
-
-  <entity model="sphere_blue" name="sphere 19">
-    <origin xyz="8 -7 1" rpy="0 0 0"/>
+    <origin xyz="5.6 -4.27 1" rpy="0 0 0"/>
   </entity>
 
   <entity model="cube" name="cube">
-    <origin xyz="7 3 1" rpy="0 0 0"/>
+    <origin xyz="4.8 1.47 1" rpy="0 0 0"/>
   </entity>
+
   
 </world>

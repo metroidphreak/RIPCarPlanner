@@ -13,7 +13,7 @@
   <!-- construct world -->
 
   <entity model="rccar">
-	  <origin xyz="0 0 3.20" rpy="1.32 0 0"/>
+	  <origin xyz="0.93 -.4 0.33" rpy="1.570796 0 0"/>
   </entity>
 
   <entity model="floor" name="floor">
@@ -96,12 +96,16 @@
     <origin xyz="5.47 -2.53 0.1" rpy="0.122173048 -1.570796 0"/>
   </entity>
 
+  <entity model="wall" name="wall5">
+    <origin xyz="1.2 -1 0.1" rpy="0.663225116 -1.570796 0"/>
+  </entity>
+
   <entity model="sphere_blue" name="sphere 19">
     <origin xyz="5.6 -4.27 1" rpy="0 0 0"/>
   </entity>
 
   <entity model="cube" name="cube">
-    <origin xyz="4.8 1.47 1" rpy="0 0 0"/>
+    <origin xyz="4.8 1.47 .33" rpy="0 0 0"/>
   </entity>
 
   

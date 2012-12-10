@@ -366,8 +366,8 @@ void RipPlannerTab::OnButton(wxCommandEvent &evt) {
         std::cout << "(i) Setting Goal state for " << mWorld->getRobot(mRobotId)->getName() << ":" << std::endl;
         
         mGoalConf = mWorld->getRobot(mRobotId)->getQuickDofs();
-        mGoalConf[0] = 6.0;
-        mGoalConf[1] = -1.6;
+        mGoalConf[0] = -0.8;
+        mGoalConf[1] = -0.53;
         //mGoalConf[2] = 0;
         
         for( unsigned int i = 0; i < mGoalConf.size(); i++ )

@@ -21,7 +21,23 @@
 	<link name="L3">
 		<visual>
 			<geometry>
-				<mesh filename="objects/RC CAR.3DS"/>
+				<mesh filename="objects/carBase.3DS"/>
+			</geometry>
+		</visual>
+	</link>
+
+	<link name="L4">
+		<visual>
+			<geometry>
+				<mesh filename="objects/leftFrontWheel.3DS"/>
+			</geometry>
+		</visual>
+	</link>
+
+	<link name="L5">
+		<visual>
+			<geometry>
+				<mesh filename="objects/rightFrontWheel.3DS"/>
 			</geometry>
 		</visual>
 	</link>
@@ -54,4 +70,23 @@
 		<axis xyz="0 1 0" />
 		<limit effort="1000" lower="-3.1416" upper="3.1416" velocity="0.1" />
 	</joint>
+
+	<!-- J4 -->
+  <joint name="J4" type="fixed">
+		<parent link="L3" />
+		<child link="L4" />
+		<origin xyz="0 0 0" rpy="0 0 0" />
+		<axis xyz="0 0 0" />
+		<limit effort="1000" lower="-3.1416" upper="3.1416" velocity="0.1" />
+	</joint>
+
+	<!-- J5 -->
+  <joint name="J5" type="fixed">
+		<parent link="L3" />
+		<child link="L5" />
+		<origin xyz="0 0 0" rpy="0 0 0" />
+		<axis xyz="0 0 0" />
+		<limit effort="1000" lower="-3.1416" upper="3.1416" velocity="0.1" />
+	</joint>
+	
 </object>

@@ -6,11 +6,12 @@
   <include filename="cube.urdf" model_name="cube"/>
   <include filename="polarbear.urdf" model_name="polarbear"/>
   <include filename="luggage3.urdf" model_name="luggage3"/>
+  <include filename="rccar.urdf" model_name="rccar"/>
   
   <!-- construct world -->
 
-  <entity model="luggage3">
-	  <origin xyz="0 0 1" rpy="1.57 0 0"/>
+  <entity model="rccar">
+	  <origin xyz="0 0 3.5" rpy="1.32 0 0"/>
   </entity>
 
   <entity model="floor" name="floor">

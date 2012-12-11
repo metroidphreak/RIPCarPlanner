@@ -56,7 +56,7 @@ public:
     std::vector<int> parentVector; /**< Vector of indices to relate configs in RRT */
     std::vector<Eigen::VectorXd> configVector; /**< Vector of all visited configs */
     std::vector<double> carOrientationAngleVector; /**< Vector of steering angle at each config */
-    std::vector<double> steeringAngleVector; /**< Vector of steering angle at each config */
+    //std::vector<double> steeringAngleVector; /**< Vector of steering angle at each config */
     
     
     struct kdtree *kdTree;

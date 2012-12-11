@@ -341,9 +341,9 @@ void RipPlannerTab::OnButton(wxCommandEvent &evt) {
         std::cout << "(i) Setting Start state for " << mWorld->getRobot(mRobotId)->getName() << ":" << std::endl;
         
         mStartConf = mWorld->getRobot(mRobotId)->getQuickDofs();
-        mStartConf[0] = 0;
-        mStartConf[1] = 0;
-        //mStartConf[2] = 0;
+        mStartConf[0] = -1.5;
+        mStartConf[1] = -0.8;
+        mStartConf[2] = 1.57;
         
         for( unsigned int i = 0; i < mStartConf.size(); i++ )
     	  { 
@@ -366,8 +366,8 @@ void RipPlannerTab::OnButton(wxCommandEvent &evt) {
         std::cout << "(i) Setting Goal state for " << mWorld->getRobot(mRobotId)->getName() << ":" << std::endl;
         
         mGoalConf = mWorld->getRobot(mRobotId)->getQuickDofs();
-        mGoalConf[0] = -0.8;
-        mGoalConf[1] = -0.53;
+        mGoalConf[0] = 2.5;
+        mGoalConf[1] = 1.43;
         //mGoalConf[2] = 0;
         
         for( unsigned int i = 0; i < mGoalConf.size(); i++ )
@@ -396,16 +396,18 @@ void RipPlannerTab::OnButton(wxCommandEvent &evt) {
       
       int maxNodes = 5000;
       bool result = mPlanner->planPath( mRobotId, 
-					mLinks, 
-					mStartConf, 
-					mGoalConf, 
-					mRrtStyle,  
-					mConnectMode,
-					mGreedyMode, 
-					mSmooth, 
-					maxNodes );
+					                              mLinks, 
+					                              mStartConf, 
+					                              mGoalConf, 
+					                              mRrtStyle,  
+					                              mConnectMode,
+					                              mGreedyMode, 
+					                              mSmooth, 
+					                              maxNodes );
       if( result  )
-	{  SetTimeline(); }
+      {
+        SetTimeline();
+      }
     }
     break;
     
